@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-light: #fff;
+    --primary-light: #f3f4f6;
+    --bg-dark: #111827;
+    --primary-dark: #242a38;
+    --secondary-dark: #333c4c;
+    --primary-blue: #028be5;
+    --primary-alert: #db2e34; 
+    --secondary-alert: #3f2727; 
+    --primary-success: #21a25b;
+    --secondary-success: #23383b;
+}
+
+@font-face {
+    font-family: 'iranSans';
+    src: url('../fonts/irsans.ttf');
+}
+
+@font-face {
+    font-family: 'iranSansBlack';
+    src: url('../fonts/irsans-black.ttf');
+}
+
+@font-face {
+    font-family: 'iranSansBold';
+    src: url('../fonts/irsans-bold.ttf');
+}
+
+@font-face {
+    font-family: 'iranSansLight';
+    src: url('../fonts/irsans-light.ttf');
+}
+
+@font-face {
+    font-family: 'iranSansUltraLight';
+    src: url('../fonts/irsans-light.ttf');
+}
+
+@font-face {
+    font-family: 'faNum';
+    src: url('../fonts/fanum.ttf');
+}
+
+@font-face {
+    font-family: 'faNumBlack';
+    src: url('../fonts/fanum-black.ttf');
+}
+
+@font-face {
+    font-family: 'faNumBold';
+    src: url('../fonts/fanum-bold.ttf');
+}
+
+@font-face {
+    font-family: 'faNumLight';
+    src: url('../fonts/fanum-ultra-light.ttf');
+}
+
+
+body {
+    font-family: 'iranSans';
+}

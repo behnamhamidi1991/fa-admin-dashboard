@@ -1,33 +1,266 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- FONT AWSOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- CSS FILES -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
     <title>پنل ادمین</title>
-</head>
-<body dir="rtl">
-    <nav id="sidebar"></nav>
+  </head>
+  <body dir="rtl">
+    <nav id="sidebar">
+      <ul>
+        <li>
+          <button onclick="toggleSidebar()" id="toggle-btn">
+            <i class="fas fa-angle-double-right"></i>
+          </button>
+          <span class="logo">codeinja</span>
+        </li>
+        <li class="active">
+          <a href="index.html">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>داشبورد</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fa fa-user-circle"></i>
+            <span>کاربران</span>
+          </a>
+        </li>
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-blog"></i>
+            <span>وبلاگ</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">پست جدید</a>
+              </li>
+              <li>
+                <a href="">لیست پستها</a>
+              </li>
+              <li>
+                <a href="">دسته بندی</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-play-circle"></i>
+            <span>ویدیو</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">ویدیو جدید</a>
+              </li>
+              <li>
+                <a href="">لیست ویدیوها</a>
+              </li>
+              <li>
+                <a href="">دسته بندی</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-podcast"></i>
+            <span>صوتی</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">پادکست جدید</a>
+              </li>
+              <li>
+                <a href="">لیست پادکستها</a>
+              </li>
+              <li>
+                <a href="">دسته بندی</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-tasks"></i>
+            <span>تسک ها</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">ضروری</a>
+              </li>
+              <li>
+                <a href="">عادی</a>
+              </li>
+              <li>
+                <a href="">انفرادی</a>
+              </li>
+              <li>
+                <a href="">گروهی</a>
+              </li>
+              <li>
+                <a href="">انجام شده</a>
+              </li>
+              <li>
+                <a href="">انجام نشده</a>
+              </li>
+              <li>
+                <a href="">تستی</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-tags"></i>
+            <span>دسته بندی ها</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">پست ها</a>
+              </li>
+              <li>
+                <a href="">ویدیو</a>
+              </li>
+              <li>
+                <a href="">صوتی</a>
+              </li>
+              <li>
+                <a href="">پروژه</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-bullhorn"></i>
+            <span>تبلیغات</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">بالای صفحه</a>
+              </li>
+              <li>
+                <a href="">ساید بار</a>
+              </li>
+              <li>
+                <a href="">سایدبلاگ</a>
+              </li>
+              <li>
+                <a href="">پایین صفحه</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+            <i class="fa fa-pencil-alt"></i>
+            <span>نویسندگان</span>
+            <i class="fas fa-caret-down"></i>
+          </button>
+          <ul class="sub-menu">
+            <div>
+              <li>
+                <a href="">ایجاد نویسنده</a>
+              </li>
+              <li>
+                <a href="">مدیریت نویسندگان</a>
+              </li>
+            </div>
+          </ul>
+        </li>
+
+        <li>
+          <a href="calendar.html">
+            <i class="fas fa-calendar"></i>
+            <span>تقویم</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-user"></i>
+            <span>پروفایل</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fas fa-cog"></i>
+            <span>تنظیمات</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fa fa-industry"></i>
+            <span>محصولات</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="profile.html">
+            <i class="fa fa-comments"></i>
+            <span>چت روم</span>
+          </a>
+        </li>
+        <li>
+          <a href="profile.html">
+            <i class="fa fa-ticket-alt"></i>
+            <span>تیکت ها</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
     <main id="main">
-        <div class="container">
-            <h1>شروع پنل ادمین</h1>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+      <div class="user-profile">
+        <div class="user-profile-right">
+          <img src="./assets/images/user.png" alt="user-profile" />
+          <form>
+            <input
+              type="file"
+              name="profile-image"
+              id="profile-image"
+              class="hidden"
+            />
+            <label for="profile-image" class="custom-file-upload">
+              <i class="fa fa-image"></i>
+              تصویر پروفایل کاربری
+            </label>
+          </form>
         </div>
-        <div class="container">
-            <h1>مدیریت کاربران</h1>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-        </div>
-        <div class="container">
-            <h1>مدیریت مطالب</h1>
-            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
-        </div>
+      </div>
     </main>
-</body>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

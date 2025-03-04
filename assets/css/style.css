@@ -1,71 +1,291 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --bg-light: #fff;
-    --primary-light: #f3f4f6;
-    --bg-dark: #111827;
-    --primary-dark: #242a38;
-    --secondary-dark: #333c4c;
-    --primary-blue: #028be5;
-    --primary-alert: #db2e34; 
-    --secondary-alert: #3f2727; 
-    --primary-success: #21a25b;
-    --secondary-success: #23383b;
+  --bg-color: #060818;
+  --primary-color: #0e1726;
+  --primary-blue: #4361ee;
+  --primary-blue-dark: #2b48b6;
+  --primary-blue-light: #1664e2;
+  --secondary-blue: #152143;
+  --primary-sky: #2196f3;
+  --secondary-sky: #0b2f52;
+  --primary-green: #00ab55;
+  --secondary-green: #0c272b;
+  --primary-yellow: #e2a03f;
+  --secondary-yellow: #282625;
+  --primary-red: #e7515a;
+  --secondary-red: #2c1c2b;
+  --primary-purple: #805dca;
+  --secondary-purple: #1d1a3b;
+  --primary-gray: #3b3f5c;
+  --secondary-gray: #181e2e;
+  --primary-text: #eee;
+  --secondary-text: #848ca8;
 }
 
 @font-face {
-    font-family: 'iranSans';
-    src: url('../fonts/irsans.ttf');
+  font-family: "iranSans";
+  src: url("../fonts/irsans.ttf");
 }
 
 @font-face {
-    font-family: 'iranSansBlack';
-    src: url('../fonts/irsans-black.ttf');
+  font-family: "iranSansBlack";
+  src: url("../fonts/irsans-black.ttf");
 }
 
 @font-face {
-    font-family: 'iranSansBold';
-    src: url('../fonts/irsans-bold.ttf');
+  font-family: "iranSansBold";
+  src: url("../fonts/irsans-bold.ttf");
 }
 
 @font-face {
-    font-family: 'iranSansLight';
-    src: url('../fonts/irsans-light.ttf');
+  font-family: "iranSansLight";
+  src: url("../fonts/irsans-light.ttf");
 }
 
 @font-face {
-    font-family: 'iranSansUltraLight';
-    src: url('../fonts/irsans-light.ttf');
+  font-family: "iranSansUltraLight";
+  src: url("../fonts/irsans-light.ttf");
 }
 
 @font-face {
-    font-family: 'faNum';
-    src: url('../fonts/fanum.ttf');
+  font-family: "faNum";
+  src: url("../fonts/fanum.ttf");
 }
 
 @font-face {
-    font-family: 'faNumBlack';
-    src: url('../fonts/fanum-black.ttf');
+  font-family: "faNumBlack";
+  src: url("../fonts/fanum-black.ttf");
 }
 
 @font-face {
-    font-family: 'faNumBold';
-    src: url('../fonts/fanum-bold.ttf');
+  font-family: "faNumBold";
+  src: url("../fonts/fanum-bold.ttf");
 }
 
 @font-face {
-    font-family: 'faNumLight';
-    src: url('../fonts/fanum-ultra-light.ttf');
+  font-family: "faNumLight";
+  src: url("../fonts/fanum-ultra-light.ttf");
 }
-
 
 body {
-    font-family: 'iranSans';
+  font-family: "iranSans";
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/* Customize scrollbar */
+body::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--primary-color); /* Track color */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-gray); /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+#sidebar {
+  box-sizing: border-box;
+  height: 100vh;
+  width: 250px;
+  padding: 5px 1em;
+  background-color: var(--bg-color);
+  border-left: 1px solid var(--primary-color);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  transition: 300ms ease-in-out;
+  overflow: hidden;
+  text-wrap: nowrap;
+  overflow-y: auto;
+}
+
+/* Customize scrollbar */
+#sidebar::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+}
+
+#sidebar::-webkit-scrollbar-track {
+  background: var(--primary-color); /* Track color */
+}
+
+#sidebar::-webkit-scrollbar-thumb {
+  background: var(--primary-gray); /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+#sidebar.close {
+  padding: 5px;
+  width: 53px;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar > ul > li:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: tomato; */
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+#sidebar ul li.active a {
+  color: var(--primary-blue);
+}
+#sidebar ul li.active a i {
+  color: var(--primary-blue);
+}
+
+#sidebar a,
+#sidebar .dropdown-btn,
+#sidebar .logo {
+  border-radius: 0.5em;
+  padding: 0.85em;
+  text-decoration: none;
+  color: var(--primary-text);
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+#sidebar i {
+  flex-shrink: 0;
+}
+
+#sidebar a span,
+#sidebar .dropdown-btn span {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover {
+  background-color: var(--primary-color);
+}
+
+#sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+}
+
+#sidebar .sub-menu > div {
+  overflow: hidden;
+}
+
+#sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+.dropdown-btn i {
+  transition: 200ms ease-in-out;
+}
+
+.rotate i:last-child {
+  rotate: -180deg;
+}
+
+#sidebar .sub-menu {
+  padding-right: 1em;
+  font-size: 14px;
+}
+
+#toggle-btn {
+  margin-left: auto;
+  padding: 1em;
+  border: none;
+  border-radius: 0.5em;
+  background: none;
+  cursor: pointer;
+  color: var(--primary-text);
+}
+
+#toggle-btn:hover {
+  background-color: var(--primary-color);
+}
+
+#toggle-btn i {
+  transition: rotate 150ms ease;
+}
+
+/* MAIN */
+#main {
+  padding: 2em 7%;
+}
+
+#main .user-profile {
+  display: grid;
+}
+
+#main .user-profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: steelblue; */
+}
+
+/* Hide the original file input */
+.hidden {
+  display: none;
+}
+
+/* Custom styles for the label as a button */
+.custom-file-upload {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1em;
+  display: flex;
+  font-size: 13px;
+  font-family: "iranSansBold";
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.custom-file-upload:hover {
+  background-color: var(--secondary-gray);
+}
+
+#main .user-profile-left {
+  background-color: tomato;
 }

@@ -245,43 +245,90 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* MAIN */
 #main {
-  padding: 2em 7%;
+  padding: 2em 3%;
 }
 
-#main .user-profile {
-  display: grid;
-}
-
-#main .user-profile-right {
+#main .main-dashboard-header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background-color: steelblue; */
-}
-
-/* Hide the original file input */
-.hidden {
-  display: none;
-}
-
-/* Custom styles for the label as a button */
-.custom-file-upload {
+  justify-content: space-between;
   background-color: var(--primary-color);
-  color: white;
-  padding: 10px 12px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 1em;
+  padding: 12px 2%;
+  border-radius: 5px;
+  align-items: center;
+  height: 80px;
+}
+
+#main .main-dashboard-header .main-dashboard-header-profile {
   display: flex;
-  font-size: 13px;
-  font-family: "iranSansBold";
+  gap: 10px;
+}
+
+.main-dashboard-header-profile-buttons {
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.custom-file-upload:hover {
-  background-color: var(--secondary-gray);
+.main-dashboard-header-profile-buttons a {
+  padding: 3px 5px;
+  border-radius: 4px;
+  font-size: 24px;
+  color: var(--primary-text);
+}
+
+.main-dashboard-header-profile-buttons a div {
+  position: relative;
+}
+
+.main-dashboard-header-profile-buttons a div span {
+  background-color: var(--primary-red);
+  padding: 8px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: "faNumBold";
+  top: -20px;
+  left: 7px;
+}
+
+.main-dashboard-header-profile-buttons button {
+  background-color: transparent;
+  color: var(--primary-text);
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main-dashboard-header-profile-image button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.visit-site {
+  background-color: var(--bg-color);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.visit-site a {
+  color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.visit-site a:hover {
+  color: var(--primary-sky);
 }

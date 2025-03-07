@@ -12,6 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- BOX ICONS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -242,23 +247,36 @@
     </nav>
 
     <main id="main">
-      <div class="user-profile">
-        <div class="user-profile-right">
-          <img src="./assets/images/user.png" alt="user-profile" />
-          <form>
-            <input
-              type="file"
-              name="profile-image"
-              id="profile-image"
-              class="hidden"
-            />
-            <label for="profile-image" class="custom-file-upload">
-              <i class="fa fa-image"></i>
-              تصویر پروفایل کاربری
-            </label>
-          </form>
+      <header class="main-dashboard-header">
+        <div class="visit-site">
+          <a href="#">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>برو به صفحه اصلی</span>
+          </a>
         </div>
-      </div>
+        <div class="main-dashboard-header-profile">
+          <div class="main-dashboard-header-profile-buttons">
+            <button>
+              <i class="bx bxs-sun"></i>
+            </button>
+            <a href="#">
+              <div>
+                <span class="number-of-messages">5</span>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+              </div>
+            </a>
+          </div>
+          <div class="main-dashboard-header-profile-image">
+            <button>
+              <img
+                src="./assets/images/user.png"
+                width="35px"
+                alt="user-profile-image"
+              />
+            </button>
+          </div>
+        </div>
+      </header>
     </main>
 
     <script src="./assets/js/script.js"></script>

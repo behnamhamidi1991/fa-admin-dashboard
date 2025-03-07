@@ -26,10 +26,11 @@
   --secondary-purple: #1d1a3b;
   --primary-gray: #3b3f5c;
   --secondary-gray: #181e2e;
-  --primary-text: #eee;
   --secondary-text: #848ca8;
+  --primary-text: #eee;
+  --bg-light: #fff;
+  --light-hover: #f0f0f0;
 }
-
 @font-face {
   font-family: "iranSans";
   src: url("../fonts/irsans.ttf");
@@ -75,10 +76,21 @@
   src: url("../fonts/fanum-ultra-light.ttf");
 }
 
-body {
+body.dark {
   font-family: "iranSans";
   background-color: var(--bg-color);
   color: var(--primary-text);
+}
+header {
+  height: 70px;
+  padding: 1em 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+#dashboard {
   min-height: 100vh;
   min-height: 100dvh;
   display: grid;
@@ -172,6 +184,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   align-items: center;
   gap: 1.2em;
+  user-select: none;
 }
 
 .dropdown-btn {
@@ -241,94 +254,4 @@ body::-webkit-scrollbar-thumb:hover {
 
 #toggle-btn i {
   transition: rotate 150ms ease;
-}
-
-/* MAIN */
-#main {
-  padding: 2em 3%;
-}
-
-#main .main-dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--primary-color);
-  padding: 12px 2%;
-  border-radius: 5px;
-  align-items: center;
-  height: 80px;
-}
-
-#main .main-dashboard-header .main-dashboard-header-profile {
-  display: flex;
-  gap: 10px;
-}
-
-.main-dashboard-header-profile-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.main-dashboard-header-profile-buttons a {
-  padding: 3px 5px;
-  border-radius: 4px;
-  font-size: 24px;
-  color: var(--primary-text);
-}
-
-.main-dashboard-header-profile-buttons a div {
-  position: relative;
-}
-
-.main-dashboard-header-profile-buttons a div span {
-  background-color: var(--primary-red);
-  padding: 8px;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  font-family: "faNumBold";
-  top: -20px;
-  left: 7px;
-}
-
-.main-dashboard-header-profile-buttons button {
-  background-color: transparent;
-  color: var(--primary-text);
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.main-dashboard-header-profile-image button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.visit-site {
-  background-color: var(--bg-color);
-  padding: 0.5em 1em;
-  border-radius: 5px;
-  font-size: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.visit-site a {
-  color: var(--primary-text);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.visit-site a:hover {
-  color: var(--primary-sky);
 }

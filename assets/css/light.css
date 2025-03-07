@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #060818;
+  --primary-color: #0e1726;
+  --primary-blue: #4361ee;
+  --primary-blue-dark: #2b48b6;
+  --primary-blue-light: #1664e2;
+  --secondary-blue: #152143;
+  --primary-sky: #2196f3;
+  --secondary-sky: #0b2f52;
+  --primary-green: #00ab55;
+  --secondary-green: #0c272b;
+  --primary-yellow: #e2a03f;
+  --secondary-yellow: #282625;
+  --primary-red: #e7515a;
+  --secondary-red: #2c1c2b;
+  --primary-purple: #805dca;
+  --secondary-purple: #1d1a3b;
+  --primary-gray: #3b3f5c;
+  --secondary-gray: #181e2e;
+  --secondary-text: #848ca8;
+  --primary-text: #eee;
+  --bg-light: #fff;
+  --light-hover: #f0f0f0;
+  --light-hover-blue: #cfd6de;
+}
+
+@font-face {
+  font-family: "iranSans";
+  src: url("../fonts/irsans.ttf");
+}
+
+@font-face {
+  font-family: "iranSansBlack";
+  src: url("../fonts/irsans-black.ttf");
+}
+
+@font-face {
+  font-family: "iranSansBold";
+  src: url("../fonts/irsans-bold.ttf");
+}
+
+@font-face {
+  font-family: "iranSansLight";
+  src: url("../fonts/irsans-light.ttf");
+}
+
+@font-face {
+  font-family: "iranSansUltraLight";
+  src: url("../fonts/irsans-light.ttf");
+}
+
+@font-face {
+  font-family: "faNum";
+  src: url("../fonts/fanum.ttf");
+}
+
+@font-face {
+  font-family: "faNumBlack";
+  src: url("../fonts/fanum-black.ttf");
+}
+
+@font-face {
+  font-family: "faNumBold";
+  src: url("../fonts/fanum-bold.ttf");
+}
+
+@font-face {
+  font-family: "faNumLight";
+  src: url("../fonts/fanum-ultra-light.ttf");
+}
+
+body.light {
+  font-family: "iranSans";
+  background-color: var(--primary-text);
+  color: var(--bg-color);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.light #sidebar {
+  background-color: var(--bg-light);
+  border-left: 1px solid var(--primary-text);
+}
+
+.light #sidebar a,
+.light #sidebar .dropdown-btn,
+.light #sidebar .logo {
+  color: var(--primary-color);
+}
+
+.light #sidebar a:hover,
+.light #sidebar .dropdown-btn:hover {
+  background-color: var(--light-hover);
+}
+
+.light #toggle-btn {
+  color: var(--primary-color);
+}
+
+.light #toggle-btn:hover {
+  background-color: var(--light-hover);
+}
+
+.light #sidebar::-webkit-scrollbar-track {
+  background: var(--light-hover); /* Track color */
+}
+
+.light #sidebar::-webkit-scrollbar-thumb {
+  background: var(--light-hover-blue); /* Thumb color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.light #sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-text); /* Thumb color on hover */
+}
+
+.light #main .main-dashboard-header {
+  background-color: var(--bg-light);
+}
+
+.light .main-dashboard-header-profile-buttons button {
+  color: var(--primary-color);
+}
+
+.light .main-dashboard-header-profile-buttons a {
+  color: var(--primary-color);
+}
+
+.light .visit-site {
+  background-color: var(--primary-text);
+}
+
+.light .visit-site a {
+  color: var(--primary-color);
+}
+
+.light .visit-site a:hover {
+  color: var(--primary-blue);
+}

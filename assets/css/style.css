@@ -285,7 +285,3 @@ body::-webkit-scrollbar-thumb:hover {
 .custom-file-upload:hover {
   background-color: var(--secondary-gray);
 }
-
-#main .user-profile-left {
-  background-color: tomato;
-}

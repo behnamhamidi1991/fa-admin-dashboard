@@ -117,6 +117,32 @@ body {
   align-items: center;
 }
 
+.header .header-menu .header-visit-website-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  padding: 5px 9px;
+  border-radius: 5px;
+}
+
+.header .header-menu .header-visit-website-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.header .header-menu .header-visit-website-btn a i {
+  color: var(--primary-text);
+  font-size: 12px;
+}
+
+.header .header-menu .header-visit-website-btn a span {
+  color: var(--primary-text);
+  font-size: 13px;
+}
+
 /* BODY */
 
 #dashboard {

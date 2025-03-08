@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #060818;
+  --primary-color: #0e1726;
+  --primary-blue: #4361ee;
+  --primary-blue-dark: #2b48b6;
+  --primary-blue-light: #1664e2;
+  --secondary-blue: #152143;
+  --primary-sky: #2196f3;
+  --secondary-sky: #0b2f52;
+  --primary-green: #00ab55;
+  --secondary-green: #0c272b;
+  --primary-yellow: #e2a03f;
+  --secondary-yellow: #282625;
+  --primary-red: #e7515a;
+  --secondary-red: #2c1c2b;
+  --primary-purple: #805dca;
+  --secondary-purple: #1d1a3b;
+  --primary-gray: #3b3f5c;
+  --secondary-gray: #181e2e;
+  --secondary-text: #848ca8;
+  --primary-text: #eee;
+  --bg-light: #fff;
+  --light-hover: #f0f0f0;
+}
+@font-face {
+  font-family: "iranSans";
+  src: url("../fonts/irsans.ttf");
+}
+
+@font-face {
+  font-family: "iranSansBlack";
+  src: url("../fonts/irsans-black.ttf");
+}
+
+@font-face {
+  font-family: "iranSansBold";
+  src: url("../fonts/irsans-bold.ttf");
+}
+
+@font-face {
+  font-family: "iranSansLight";
+  src: url("../fonts/irsans-light.ttf");
+}
+
+@font-face {
+  font-family: "iranSansUltraLight";
+  src: url("../fonts/irsans-light.ttf");
+}
+
+@font-face {
+  font-family: "faNum";
+  src: url("../fonts/fanum.ttf");
+}
+
+@font-face {
+  font-family: "faNumBlack";
+  src: url("../fonts/fanum-black.ttf");
+}
+
+@font-face {
+  font-family: "faNumBold";
+  src: url("../fonts/fanum-bold.ttf");
+}
+
+@font-face {
+  font-family: "faNumLight";
+  src: url("../fonts/fanum-ultra-light.ttf");
+}
+
+.notification {
+  color: var(--primary-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.notification span {
+  background-color: var(--primary-red);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: -2px;
+}

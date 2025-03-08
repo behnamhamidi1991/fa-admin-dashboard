@@ -76,19 +76,48 @@
   src: url("../fonts/fanum-ultra-light.ttf");
 }
 
-body.dark {
+body {
   font-family: "iranSans";
   background-color: var(--bg-color);
   color: var(--primary-text);
 }
-header {
-  height: 70px;
-  padding: 1em 10%;
+.header {
+  height: 50px;
+  padding: 1em 9%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: var(--primary-color);
 }
+
+.header .header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.header .header-menu .header-profile-img button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .header-menu .header-profile-img img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.header .header-menu .header-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BODY */
 
 #dashboard {
   min-height: 100vh;

@@ -121,9 +121,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
+  background-color: var(--primary-blue);
   padding: 5px 9px;
   border-radius: 5px;
+}
+
+.header .header-menu .header-visit-website-btn:hover {
+  background-color: var(--primary-blue-dark);
 }
 
 .header .header-menu .header-visit-website-btn a {
@@ -131,15 +135,14 @@ body {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  color: var(--primary-text);
 }
 
 .header .header-menu .header-visit-website-btn a i {
-  color: var(--primary-text);
   font-size: 12px;
 }
 
 .header .header-menu .header-visit-website-btn a span {
-  color: var(--primary-text);
   font-size: 13px;
 }
 
